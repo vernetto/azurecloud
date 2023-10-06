@@ -1,12 +1,8 @@
 Azure Hybrid solution
 
-Requirement:
+# Requirement: Consolidation of account management based on internal Active Directory.
 
-    Consolidation of account management based on internal Active Directory.
-
-Solution:
-
-    Azure AD Connect Implementation
+Solution: Azure AD Connect Implementation
 
 Actions:
 
@@ -14,20 +10,16 @@ Actions:
     - Configure Password Hash Synchronization and Single Sign-On (SSO).
 
 
-Requirement:
+# Requirement: Adherence to best practices for domain naming.
 
-    Adherence to best practices for domain naming.
-
-Solution:
-
-    Rename AD Domain
+Solution: Rename AD Domain
 
 Actions:
     
     Change the internal domain name to a public domain subdomain
 
 
-Requirement:
+# Requirement:
 
 Solution:
 
@@ -35,7 +27,7 @@ Actions:
 
 
 
-Requirement:
+# Requirement:
 
 Solution:
 
@@ -43,7 +35,7 @@ Actions:
 
 
 
-Requirement:
+# Requirement:
 
 Solution:
 
@@ -51,7 +43,7 @@ Actions:
 
 
 
-Requirement:
+# Requirement:
 
 Solution:
 
@@ -60,7 +52,7 @@ Actions:
 
 
 
-Requirement:
+# Requirement:
 
 Solution:
 
@@ -68,7 +60,7 @@ Actions:
 
 
 
-Requirement:
+# Requirement:
 
 Solution:
 
