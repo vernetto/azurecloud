@@ -17,7 +17,7 @@ Azure Hybrid solution
 
 # Requirement: Consolidation of account management based on internal Active Directory.
 
-Solution: Azure AD Connect Implementation
+Solution: *Azure AD Connect* Implementation
 
 Actions:
 
