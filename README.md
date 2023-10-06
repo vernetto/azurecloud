@@ -6,12 +6,14 @@ Azure Hybrid solution
 * [Requirement: Adherence to best practices for domain naming.](#requirement-adherence-to-best-practices-for-domain-naming)
 * [Requirement: Security department's requirement for enforcing MFA in VPN and line-of-business apps.](#requirement-security-departments-requirement-for-enforcing-mfa-in-vpn-and-line-of-business-apps)
 * [Requirement: Issues with the remote password reset process and reducing the help desk workload.](#requirement-issues-with-the-remote-password-reset-process-and-reducing-the-help-desk-workload)
-* [Requirement:](#requirement)
-* [Requirement:](#requirement-1)
-* [Requirement:](#requirement-2)
-* [Requirement:](#requirement-3)
+* [Requirement: Requirement for emergency access to Azure AD and monitoring of related activities.](#requirement-requirement-for-emergency-access-to-azure-ad-and-monitoring-of-related-activities)
+* [Requirement: Requirement to allow authorization based on user authentication and client endpoint compliance state.](#requirement-requirement-to-allow-authorization-based-on-user-authentication-and-client-endpoint-compliance-state)
+* [Requirement: Requirement for secure and manageable collaboration with Vasil Brokers.](#requirement-requirement-for-secure-and-manageable-collaboration-with-vasil-brokers)
+* [Requirement: Security department's requirement to block compromised and incorrect passwords.](#requirement-security-departments-requirement-to-block-compromised-and-incorrect-passwords)
+* [Requirement: Requirement to maintain operational capability during cloud or internal infrastructure outages.](#requirement-requirement-to-maintain-operational-capability-during-cloud-or-internal-infrastructure-outages)
+* [Requirement: Requirement for secure connectivity between on-premises and Azure environments.](#requirement-requirement-for-secure-connectivity-between-on-premises-and-azure-environments)
+* [Requirement: Requirement for granular access control to Azure resources.](#requirement-requirement-for-granular-access-control-to-azure-resources)
 <!-- TOC -->
-
 
 # Requirement: Consolidation of account management based on internal Active Directory.
 
