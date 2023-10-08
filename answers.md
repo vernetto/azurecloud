@@ -338,3 +338,59 @@ Organizing these tasks and their dependencies in a Gantt chart or a similar proj
 
 
 
+# Constraints
+
+Given the information provided on Bell-Fin JSC's situation, the following constraints can be inferred:
+1. Legacy System Integration:
+
+   Description: The company has a 15-year-old "one Active Directory Forest" design. Integrating modern systems with legacy architectures can be challenging.
+   Implication: May require additional time or specialized expertise to ensure seamless integration.
+
+2. Domain Name Limitation:
+
+   Description: Bell-Fin JSC uses a .local domain name internally, which isn't recommended.
+   Implication: Renaming the domain or establishing domain trusts might be necessary, which can add complexity to the project.
+
+3. Continuity of Business Operations:
+
+   Description: The solution must not disrupt the regular business operations during and post-implementation.
+   Implication: Implementation may need to be done in stages or during off-peak hours to avoid disruption.
+
+4. Remote Work Infrastructure:
+
+   Description: Due to the pandemic, the company had to adapt to remote work. This setup must be retained and even enhanced.
+   Implication: The new hybrid identity solution should not only cater to on-premises requirements but also remote access needs.
+
+5. Regulatory and Compliance Boundaries:
+
+   Description: As a financial company, Bell-Fin JSC would have stringent regulatory requirements related to data protection and user access.
+   Implication: The solution must ensure it adheres to all industry-specific regulations.
+
+6. Budgetary Constraints:
+
+   Description: Implementing a new solution comes with costs. While the exact budget isn't specified, it's safe to assume there will be financial limitations.
+   Implication: Cost-effective solutions might be preferred, and unexpected costs could pose challenges.
+
+7. User Training:
+
+   Description: Employees have been using the current system for a considerable time, and any new system will require them to adapt.
+   Implication: Adequate training sessions and support systems need to be put in place, consuming time and resources.
+
+8. Emergency Access Needs:
+
+   Description: The company requires emergency access to Azure AD without any technical hurdles.
+   Implication: This might constrain the types of security measures that can be put in place without complicating emergency access.
+
+9. Partner Integration:
+
+   Description: Bell-Fin JSC is expanding its partnership model, necessitating access for partners without compromising security.
+   Implication: The identity solution must be adaptable to include partner organizations without extensive reconfiguration.
+
+10. Internal Infrastructure Dependence:
+
+    Description: The final solution should not make Bell-Fin JSC entirely dependent on cloud services for its operations.
+    Implication: A true hybrid model needs to be implemented, ensuring operations can continue even if cloud services or internal infrastructure face issues.
+
+Recognizing these constraints upfront can help Bell-Fin JSC make informed decisions and better plan the hybrid identity solution's implementation.
+
+
