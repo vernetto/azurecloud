@@ -63,7 +63,7 @@ Business Goals:
 In summary, Bell-Fin JSC's primary objectives revolve around improving IT resilience, security, operational efficiency, and enhancing collaboration capabilities, all underpinned by a strong emphasis on modern identity and access management solutions.
 
 
-# Scope
+## Scope
 
 Given the detailed description of Bell-Fin JSC's current state and requirements, the scope of the solution to their problems can be outlined as follows:
 
@@ -117,7 +117,7 @@ In essence, the solution scope aims to provide Bell-Fin JSC with a modern, secur
 
 
 
-# Assumptions
+## Assumptions
 
 Given the details provided on Bell-Fin JSC's situation, the following assumptions have been made:
 1. Infrastructure Readiness
@@ -173,7 +173,7 @@ Given the details provided on Bell-Fin JSC's situation, the following assumption
 In the process of developing a detailed solution and planning the implementation, it's essential to validate these assumptions with Bell-Fin JSC to ensure accuracy and reduce risks.
 
 
-# Risks
+## Risks
 
 1. Implementation Complexity
 
@@ -251,7 +251,7 @@ Incorporating these probabilities, impacts, and mitigation strategies into the i
 
 
 
-# Tasks
+## Tasks
 
 When implementing a hybrid identity solution for Bell-Fin JSC, there will be several tasks that need to be accomplished. Here's a list of such tasks, along with their potential dependencies:
 1. Infrastructure Assessment
@@ -338,7 +338,7 @@ Organizing these tasks and their dependencies in a Gantt chart or a similar proj
 
 
 
-# Constraints
+## Constraints
 
 Given the information provided on Bell-Fin JSC's situation, the following constraints can be inferred:
 1. Legacy System Integration:
@@ -392,5 +392,63 @@ Given the information provided on Bell-Fin JSC's situation, the following constr
     Implication: A true hybrid model needs to be implemented, ensuring operations can continue even if cloud services or internal infrastructure face issues.
 
 Recognizing these constraints upfront can help Bell-Fin JSC make informed decisions and better plan the hybrid identity solution's implementation.
+
+
+## Decisions 
+
+1. Adopting Azure AD Connect for Synchronization
+
+   Decision: Use Azure AD Connect to synchronize on-premises Active Directory with Azure AD.
+   Justification: It provides a seamless integration between on-premises and cloud directories, ensuring that users have a consistent identity across resources.
+
+2. Domain Strategy
+
+   Decision: Instead of renaming the .local domain, establish trusts or use Azure AD B2B for external collaborations.
+   Justification: Domain renaming is complex and risky. Establishing trusts or leveraging Azure B2B functionalities can work around the .local domain challenge without the inherent risks of domain renaming.
+
+3. Multi-factor Authentication (MFA)
+
+   Decision: Implement Azure MFA across VPN, critical applications, and data access.
+   Justification: With the growing threats to financial firms, MFA offers an added layer of security by requiring two or more verification methods – something the user knows (password), something the user has (security token or phone), or something the user is (biometric verification).
+
+4. Emergency Access Accounts
+
+   Decision: Create dedicated emergency access accounts in Azure AD, ensuring they have minimal dependencies and are separate from standard user roles.
+   Justification: It ensures that there's always a way to access essential resources in Azure AD during emergencies without the complications of regular security protocols.
+
+5. Endpoint Compliance and Conditional Access
+
+   Decision: Leverage Azure AD's conditional access policies based on endpoint compliance.
+   Justification: This allows for granular control of resource access based on both user identity and the security posture of the accessing device, ensuring heightened security for business-critical resources.
+
+6. Partner Collaboration using Azure AD B2B
+
+   Decision: Use Azure AD B2B for collaborating with partners like Vasil Brokers, allowing them to use their credentials.
+   Justification: Azure AD B2B enables external users to access company resources without being a member of the domain. This reduces the risks associated with external users while maintaining collaboration.
+
+7. Password Reset with Self-Service Password Reset (SSPR)
+
+   Decision: Implement Azure AD's SSPR for users.
+   Justification: It automates the password reset process, reducing the load on the help desk and minimizing potential security issues arising from social engineering attacks.
+
+8. Monitoring and Auditing with Azure AD Identity Protection
+
+   Decision: Deploy Azure AD Identity Protection for real-time monitoring and mitigation of identity-based threats.
+   Justification: It provides risk-based conditional access, detecting potential vulnerabilities and compromised identities, essential for a financial institution like Bell-Fin JSC.
+
+9. Decentralized Authentication for Cloud Service Outages
+
+   Decision: Retain on-premises authentication mechanisms in parallel with Azure AD.
+   Justification: This ensures that in the event of cloud service outages, users can still authenticate and access resources using the on-premises infrastructure.
+
+10. User Training and Support Strategy
+
+    Decision: Organize comprehensive training sessions and establish a support mechanism for post-deployment issues.
+    Justification: Changes in authentication processes can be disruptive. Proper training ensures smoother transition and user adoption, while support mechanisms handle any post-deployment queries or issues.
+
+These design decisions, rooted in the unique needs and constraints of Bell-Fin JSC, help build a resilient, secure, and efficient hybrid identity system.
+
+
+
 
 
