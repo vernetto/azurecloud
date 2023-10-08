@@ -1,3 +1,18 @@
+<!-- TOC -->
+  * [Case description and current state](#case-description-and-current-state)
+  * [Business drivers and goals](#business-drivers-and-goals)
+  * [Scope](#scope)
+  * [Assumptions](#assumptions)
+  * [Risks](#risks)
+  * [Tasks](#tasks)
+  * [Constraints](#constraints)
+  * [Decisions](#decisions-)
+  * [Advantages](#advantages)
+  * [Deployment diagram](#deployment-diagram)
+  * [Visio](#visio)
+  * [Calculator](#calculator)
+<!-- TOC -->
+
 
 ## Case description and current state
 
