@@ -449,6 +449,173 @@ Recognizing these constraints upfront can help Bell-Fin JSC make informed decisi
 These design decisions, rooted in the unique needs and constraints of Bell-Fin JSC, help build a resilient, secure, and efficient hybrid identity system.
 
 
+## Advantages
+
+Here's a breakdown of the solution advantages:
+
+    Hybrid Identity Management:
+        Seamless Integration: A hybrid approach merges the benefits of on-premises AD with Azure AD, offering a seamless experience for end-users. They use the same credentials across on-premises and cloud resources, simplifying user management.
+        Flexibility: If Bell-Fin JSC ever decides to shift more resources to the cloud, the transition becomes smoother because of the foundational hybrid setup.
+
+    Enhanced Security:
+        Multi-Factor Authentication (MFA): MFA significantly reduces the risk of unauthorized access, even if credentials are compromised.
+        Conditional Access: This provides a dynamic approach to granting access based on user risk and device compliance, further enhancing security.
+        Azure AD Identity Protection: It offers real-time risk-based conditional access, ensuring compromised identities are identified and acted upon promptly.
+
+    Operational Efficiency:
+        Automated Synchronization: Azure AD Connect ensures automatic synchronization between on-premises AD and Azure AD, minimizing manual interventions and ensuring consistency.
+        Elimination of Redundancy: Centralized identity management reduces duplicate efforts in user provisioning and management.
+
+    Collaboration and External Access:
+        Azure AD B2B Collaboration: It facilitates secure and easy collaboration with external partners without exposing internal systems or creating unnecessary user accounts. This meets the need for secure collaboration with Vasil Brokers.
+        Self-Service Capabilities: Features like self-service password reset reduce the workload on the help desk, ensuring a reduced margin of error and offering better user satisfaction.
+
+    Robust Availability and Redundancy:
+        Dual Accessibility: Even if cloud services face outages, on-premises resources remain accessible, and vice versa. This meets Bell-Fin JSC's requirement of business continuity in various scenarios.
+
+    Compliance and Auditing:
+        Comprehensive Auditing: Azure AD provides detailed logs and reporting capabilities, ensuring all access and activities are tracked, which is vital for regulatory and internal compliance.
+        Endpoint Compliance Systems: By validating device health before granting access to resources, the company ensures that potentially compromised or non-compliant devices are not a security liability.
+
+    Cost Efficiency:
+        Pay-as-You-Go: Azure services operate on a consumption-based model, which means Bell-Fin JSC only pays for what it uses, optimizing cost.
+        Reduced Infrastructure Costs: Leveraging cloud-based identity solutions can reduce the need for extensive on-premises infrastructure and the associated costs.
+
+    Future-Proofing:
+        Scalability: Azure solutions can scale according to the needs of the company, ensuring that as Bell-Fin JSC grows, its identity solutions can grow with it.
+        Continuous Updates: Azure services are continuously updated, ensuring Bell-Fin JSC benefits from the latest features, security patches, and best practices without needing significant manual interventions.
+
+In essence, the proposed solution aligns with Bell-Fin JSC's immediate requirements and future-proofs their identity infrastructure. It offers a blend of security, operational efficiency, and flexibility, making it a solid recommendation for any expert or stakeholder involved in the decision-making process.
+
+
+
+
+## Deployment diagram
+
+A solution deployment diagram for Bell-Fin JSC's hybrid identity solution should contain the following key elements:
+Infrastructure & Networking:
+
+    On-Premises Data Center(s): Depicting Bell-Fin JSC's primary and any secondary data centers.
+    Azure Data Centers: Indicating the Azure regions where the company's cloud resources are hosted.
+    VPN / ExpressRoute: To illustrate the dedicated network connections between on-premises and Azure.
+
+Identity Components:
+
+    On-Premises Active Directory (AD): Showing domain controllers, and potentially sites if multiple locations have localized controllers.
+    Azure Active Directory (Azure AD): Indicating the Azure AD instance, including any replication or redundancy set up.
+    Azure AD Connect: Depicting the server where this is installed, indicating its role in synchronizing the on-prem AD with Azure AD.
+    Emergency Access Accounts: A dedicated section or highlight for these accounts, given their significance.
+
+Security & Compliance:
+
+    Multi-Factor Authentication (MFA): Indicating how MFA integrates into the authentication flow.
+    Conditional Access Policies: Representations to show conditions (e.g., device compliance) and their corresponding actions (e.g., grant/deny access).
+    Azure AD Identity Protection: To illustrate risk-based evaluations.
+
+Collaborative Elements:
+
+    Azure AD B2B: Depicting the integration flow with external partners, such as Vasil Brokers.
+    Partner Infrastructure: An overview of Vasil Brokers' identity infrastructure and how it communicates with Bell-Fin JSC.
+
+Endpoint & Devices:
+
+    End-user Devices: Including desktops, laptops, mobile devices, and potentially any specialized equipment.
+    Endpoint Compliance Systems: Tools or platforms used to evaluate device compliance.
+
+Applications & Services:
+
+    Line-of-Business Apps: Depicting both cloud-hosted and on-premises applications.
+    SaaS Solutions: Highlighting third-party SaaS platforms like Office 365 and others that the company uses.
+    Authentication Flows: Indicating how authentication requests flow through the system, from end-user devices through the identity components, and to the applications.
+
+Miscellaneous:
+
+    Backup & Recovery Systems: Highlighting both on-premises and cloud backup solutions.
+    Monitoring & Reporting Tools: Indicating tools that will be used for auditing, monitoring, and alerting.
+
+To make the deployment diagram comprehensible:
+
+    Use standardized symbols/icons for common components.
+    Group related components logically.
+    Use arrows and lines to indicate data flow, synchronization, and network connections.
+    Incorporate legends or side-notes for clarity, especially for non-standard symbols or complex processes.
+
+Once you have these elements outlined, you can work with a diagramming tool or software to visually organize and represent the entire deployment scenario.
+
+
+
+
+
+## Visio
+
+Using Microsoft Visio (or any similar tool):
+
+    Canvas Setup: Begin with a blank canvas. Set a suitable page size and orientation.
+
+    Infrastructure & Networking:
+        Place icons/symbols for Bell-Fin JSC's data centers. Label them appropriately.
+        Position Azure cloud symbols for Azure data centers.
+        Use connecting lines/arrows to represent VPN or ExpressRoute connections between on-premises and Azure.
+
+    Identity Components:
+        Drag and drop symbols representing servers. Label one for on-premises AD and another for Azure AD.
+        Insert another server symbol for Azure AD Connect, connecting it to both ADs.
+
+    Security & Compliance:
+        Use a lock or shield symbol to represent MFA. Place it in the user access path.
+        Use labeled rectangles or decision symbols for conditional access policies.
+        Incorporate Azure AD Identity Protection as part of the Azure AD representation.
+
+    Collaborative Elements:
+        Represent Azure AD B2B with another cloud symbol or a collaboration icon.
+        Show an external network or cloud to represent Vasil Brokers and connect it to Azure AD B2B.
+
+    Endpoint & Devices:
+        Use computer, mobile, and other device icons to represent end-user devices.
+        Connect these devices to the access path, passing through MFA and conditional access policies.
+
+    Applications & Services:
+        Use application icons or symbols for both on-premises and cloud applications. Label them accordingly.
+        Connect user devices to these applications, indicating the flow of authentication.
+
+    Miscellaneous:
+        Include symbols or representations for backup systems, connected to the main infrastructure.
+        Insert monitoring icons connected to all major components to represent monitoring and alerting.
+
+    Labeling and Legend:
+        Ensure all components are labeled. This includes servers, networks, connections, and services.
+        Add a legend section that explains any symbols or conventions you've used that aren't self-explanatory.
+
+    Review and Refinement: Zoom out and review the diagram for clarity and flow. Ensure all elements are connected correctly. Refine any positions or paths that seem congested or unclear.
+
+Once completed, you can save, share, or print the diagram as required.
+
+
+
+## Calculator
+
+    Open Azure Pricing Calculator: Navigate to the Azure Pricing Calculator website.
+
+    Select Products:
+        Azure Active Directory (Azure AD): Start with the P1 or P2 plans based on the advanced features you need. Consider the number of employees and potentially the number of guest users from Vasil Brokers.
+        Azure AD Connect: This service is free; however, if you opt for Azure AD Connect Health, there may be costs associated with it.
+        Azure Multi-Factor Authentication (MFA): Depending on whether you have Azure AD P2 (which includes MFA) or need standalone MFA.
+        Azure AD B2B: Factor in the number of external users you anticipate. Remember, some levels of Azure AD come with a certain amount of B2B users included.
+        VPN/ExpressRoute: Depending on your chosen connection method, add either the VPN Gateway or the ExpressRoute. The cost depends on the bandwidth and features you choose.
+        Azure AD Identity Protection: This is typically bundled with Azure AD P2, but if you have a different tier, you might need to add it separately.
+
+    Adjust Quantities and Options: For each service, input the number of users, bandwidth, storage, or any other metric that affects pricing. Choose the correct region, as prices might differ.
+
+    Review Estimates: As you add services and adjust quantities, the calculator will provide an ongoing estimate. Make sure to review it to ensure you've covered all necessary services.
+
+    Export/Share: Once you have all services added and configured, there should be options to either export the estimate to an Excel file or share it. If you opt for sharing, the calculator will provide a link.
+
+You can then share that link with stakeholders or use the Excel export for further analysis.
+
+If you follow these steps, you should have a clear estimate of the monthly and annual costs of your Azure-based solution for Bell-Fin JSC.
+
+
+
 
 
 
