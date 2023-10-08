@@ -507,6 +507,9 @@ In essence, the proposed solution aligns with Bell-Fin JSC's immediate requireme
 
 ## Deployment diagram
 
+![Solution diagram](overallDiagram.jpg)
+
+
 A solution deployment diagram for Bell-Fin JSC's hybrid identity solution should contain the following key elements:
 Infrastructure & Networking:
 
@@ -608,6 +611,9 @@ Once completed, you can save, share, or print the diagram as required.
 
 
 ## Calculator
+
+
+
 
     Open Azure Pricing Calculator: Navigate to the Azure Pricing Calculator website.
 
