@@ -17,7 +17,7 @@ Azure Hybrid solution
 
 # Requirement: Consolidation of account management based on internal Active Directory.
 
-Solution: *Azure AD Connect* Implementation
+Solution: **Azure AD Connect** Implementation
 
 Actions:
 
@@ -111,6 +111,44 @@ Solution: Role-based Access Control (RBAC)
 Actions:
 
     Implement RBAC for Azure resources.
+
+
+
+#Actions
+- Setup of Azure AD Connect, AD Domain Rename, MFA, and SSPR
+- Setup of Endpoint Compliance, Conditional Access, and Intune for Device Management.
+- B2B Collaboration Setup, Password Policies & Monitoring, and RBAC Setup.
+
+
+Open Points
+
+Pass Through Agent (PTA) is needed? 
+
+Federation Proxy?
+
+
+# References
+
+https://www.youtube.com/watch?v=SS-5qDgPvJU  How to get started with hybrid identity in Azure Active Directory
+
+https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/choose-ad-authn
+
+
+
+
+
+Microsoft Entra Connect features
+
+    Password hash synchronization - A sign-in method that synchronizes a hash of a users on-premises AD password with Microsoft Entra ID.
+
+    Pass-through authentication - A sign-in method that allows users to use the same password on-premises and in the cloud, but doesn't require the additional infrastructure of a federated environment.
+
+    Federation integration - Federation is an optional part of Microsoft Entra Connect and can be used to configure a hybrid environment using an on-premises AD FS infrastructure. It also provides AD FS management capabilities such as certificate renewal and additional AD FS server deployments.
+
+    Synchronization - Responsible for creating users, groups, and other objects. As well as, making sure identity information for your on-premises users and groups is matching the cloud. This synchronization also includes password hashes.
+
+    Health Monitoring - Microsoft Entra Connect Health can provide robust monitoring and provide a central location in the Microsoft Entra admin center to view this activity.
+
 
 
 
