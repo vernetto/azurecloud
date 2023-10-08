@@ -117,3 +117,59 @@ In essence, the solution scope aims to provide Bell-Fin JSC with a modern, secur
 
 
 
+# Assumptions
+
+Given the details provided on Bell-Fin JSC's situation, the following assumptions have been made:
+1. Infrastructure Readiness
+
+   Assumption: Bell-Fin JSC's existing infrastructure (hardware, network, software) can support the proposed hybrid identity and security solutions.
+   Rationale: Implementing Azure AD and other cloud-based solutions require certain infrastructure prerequisites.
+
+2. Domain Modernization
+
+   Assumption: The company is willing to undergo a domain renaming or trust configuration process to align with best practices.
+   Rationale: The use of the .local domain naming isn't recommended and may affect certain cloud functionalities.
+
+3. Budget and Licensing
+
+   Assumption: Bell-Fin JSC is prepared to invest in necessary licensing for Azure AD Premium features, Intune, or any other suggested tools.
+   Rationale: Features like Azure AD Identity Protection, B2B collaboration, and Intune require premium licenses.
+
+4. Training & Change Management
+
+   Assumption: The company is open to training its IT staff and end-users on new tools, processes, and security measures.
+   Rationale: Successful adoption of new technologies often requires education and training.
+
+5. Stakeholder Buy-in
+
+   Assumption: Key stakeholders, including top management and the security department, are supportive of the changes and will cooperate in the implementation phase.
+   Rationale: Significant IT transformations often require approval and cooperation from multiple departments.
+
+6. Data & Privacy Compliance
+
+   Assumption: Transitioning to a hybrid model and storing some identity data in the cloud adheres to Bell-Fin JSC's compliance and regulatory requirements.
+   Rationale: Financial institutions often face strict regulations regarding data storage and privacy.
+
+7. Endpoint Device Types
+
+   Assumption: The majority, if not all, of the endpoint devices accessing the corporate resources are Windows-based, given the information about Windows 10 migration.
+   Rationale: Different endpoint OS types may require varied management solutions.
+
+8. Partner Collaboration Readiness
+
+   Assumption: Partner companies, like Vasil Brokers, have the IT capability and willingness to participate in the Azure AD B2B collaboration method.
+   Rationale: B2B collaboration requires actions on both ends for successful implementation.
+
+9. Existing Security Solutions
+
+   Assumption: Bell-Fin JSC doesn’t already have other security solutions in place that could conflict with the proposed measures.
+   Rationale: It's crucial to ensure compatibility and prevent overlaps in security solutions.
+
+10. Backup & Recovery
+
+    Assumption: The company has effective backup and disaster recovery solutions in place for their on-premises systems.
+    Rationale: Hybrid solutions rely on both on-premises and cloud resources. If one fails, the backup and recovery processes become vital.
+
+In the process of developing a detailed solution and planning the implementation, it's essential to validate these assumptions with Bell-Fin JSC to ensure accuracy and reduce risks.
+
+
